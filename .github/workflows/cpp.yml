@@ -13,8 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: get_cppcheck
-      run: sudo apt-get install cppcheck
-    - name: Code Quality
-      run: make analysis
-
+    - name: Install
+      run: sudo apt-get install cppcheck    
+    - name: Static Analysis
+      run: cppcheck --enable=all Project
