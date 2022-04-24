@@ -12,9 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: get_avr-gcc
-      run: sudo apt-get install gcc-avr binutils-avr avr-libc
-    - name: Compile
+    - uses: actions/checkout@v3
+    - name: build
       run: make -C Project/3_Implementation
 
